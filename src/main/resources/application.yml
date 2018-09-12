@@ -1,0 +1,26 @@
+webdriver:
+  type: chrome # chrome, edge, ie, firefox, safari
+  path: drivers/chromedriver-2.41-win32.exe
+  element-timeout: 30 #secs
+  position: 0,0 #0,0 by default
+  dimension: 800x600 #maximize by default
+  gridhub-server: # empty: local driver, 192.168.22.113 (default port is 4444), 192.168.22.113:5555 for selenium gridhub
+  screenshot-folder: output/screenshot
+
+
+webapp:
+  baseuri: http://192.168.74.25/patest
+  pageload-timeout: 10 #secs
+
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.74.25:3308/patest
+    username: patest
+    password: Pass4Testing@2017
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+logging:
+  file: logs/patest.log
+  level:
+    root: WARN
+    vn.kms.kta: DEBUG
